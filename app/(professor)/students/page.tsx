@@ -20,6 +20,7 @@ import { Plus, Trash2, Users } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { addStudent, deleteStudent } from "./actions";
 import { DeleteButton } from "@/components/ui/delete-button";
+import { AddStudentForm } from "@/components/students/add-student-form";
 
 export const revalidate = 0;
 
@@ -42,19 +43,7 @@ export default async function StudentsPage() {
             <CardDescription>Enroll a new student.</CardDescription>
           </CardHeader>
           <CardContent>
-            <form action={addStudent} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Full Name</Label>
-                <Input id="name" name="name" placeholder="e.g., John Doe" required />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="studentId">Student ID</Label>
-                <Input id="studentId" name="studentId" placeholder="e.g., 2023-0001" required />
-              </div>
-              <Button type="submit" className="w-full">
-                <Plus className="mr-2 h-4 w-4" /> Add Student
-              </Button>
-            </form>
+            <AddStudentForm />
           </CardContent>
         </Card>
 

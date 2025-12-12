@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { login } from "./actions";
+import { ProfessorLoginForm } from "@/components/auth/professor-login-form";
 
 export default function LoginPage() {
   return (
@@ -15,21 +16,7 @@ export default function LoginPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form action={login} className="grid gap-4">
-            <div className="grid gap-2">
-              <Label htmlFor="employeeId">Employee ID</Label>
-              <Input
-                id="employeeId"
-                name="employeeId"
-                type="text"
-                placeholder="e.g., PROF123"
-                required
-              />
-            </div>
-            <Button type="submit" className="w-full">
-              Sign in
-            </Button>
-          </form>
+          <ProfessorLoginForm />
         </CardContent>
       </Card>
     </div>

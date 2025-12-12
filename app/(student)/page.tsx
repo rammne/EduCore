@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { studentLogin, studentLogout } from "./actions";
+import { StudentLoginForm } from "@/components/students/student-login-form";
 
 export const revalidate = 0;
 
@@ -26,21 +27,7 @@ export default async function StudentHomePage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form action={studentLogin} className="grid gap-4">
-              <div className="grid gap-2">
-                <Label htmlFor="studentId">Student ID</Label>
-                <Input
-                  id="studentId"
-                  name="studentId"
-                  type="text"
-                  placeholder="e.g., 2023-0001"
-                  required
-                />
-              </div>
-              <Button type="submit" className="w-full">
-                <LogIn className="mr-2 h-4 w-4" /> Enter Portal
-              </Button>
-            </form>
+            <StudentLoginForm />
           </CardContent>
         </Card>
       </div>
