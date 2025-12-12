@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { LayoutDashboard, BookOpen, Bell, GraduationCap, LogOut } from "lucide-react"
+import { LayoutDashboard, BookOpen, Bell, GraduationCap, LogOut, Users } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { logout } from "@/app/login/actions"
 
@@ -24,6 +24,12 @@ const routes = [
     icon: Bell,
     href: "/announcements",
     color: "text-pink-700",
+  },
+  {
+    label: "Students",
+    icon: Users,
+    href: "/students",
+    color: "text-orange-700",
   },
 ]
 

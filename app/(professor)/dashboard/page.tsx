@@ -14,6 +14,10 @@ export default async function DashboardPage() {
     .select("*", { count: "exact", head: true })
     .eq("is_active", true);
 
+  const { count: studentCount } = await supabase
+    .from("students")
+    .select("*", { count: "exact", head: true });
+
   return (
     <div className="p-8 space-y-8">
       <div className="flex items-center justify-between">
@@ -55,9 +59,9 @@ export default async function DashboardPage() {
             <Users className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">2,350</div>
+            <div className="text-2xl font-bold">{studentCount || 0}</div>
             <p className="text-xs text-muted-foreground">
-              +180 new enrollments
+              Enrolled students
             </p>
           </CardContent>
         </Card>

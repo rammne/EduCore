@@ -26,3 +26,11 @@ create table activities (
   due_date timestamp with time zone,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
+
+-- Create students table
+create table students (
+  id uuid default gen_random_uuid() primary key,
+  student_id text not null unique,
+  name text not null,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
