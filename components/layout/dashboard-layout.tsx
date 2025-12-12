@@ -1,4 +1,6 @@
 import { Sidebar } from "@/components/layout/sidebar"
+import { Menu } from "lucide-react"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 
 export default function DashboardLayout({
   children,
@@ -11,6 +13,17 @@ export default function DashboardLayout({
         <Sidebar />
       </div>
       <main className="md:pl-72">
+        <div className="flex items-center p-4 md:hidden">
+          <Sheet>
+            <SheetTrigger>
+              <Menu className="h-6 w-6" />
+            </SheetTrigger>
+            <SheetContent side="left" className="p-0 bg-gray-900 border-r-gray-800 text-white w-72">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <Sidebar />
+            </SheetContent>
+          </Sheet>
+        </div>
         {children}
       </main>
     </div>

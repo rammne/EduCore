@@ -52,7 +52,7 @@ export default async function StudentCoursePage({ params }: PageProps) {
         <h1 className="text-4xl font-bold tracking-tight">{course.title}</h1>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-[2fr_1fr]">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-[2fr_1fr]">
         <div className="space-y-8">
           <section className="space-y-4">
             <div className="flex items-center space-x-2">

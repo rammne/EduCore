@@ -31,7 +31,7 @@ export default async function StudentsPage() {
 
   return (
     <div className="p-8 space-y-8">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <h2 className="text-3xl font-bold tracking-tight">Students</h2>
       </div>
 
@@ -58,7 +58,7 @@ export default async function StudentsPage() {
           </CardContent>
         </Card>
 
-        <div className="rounded-md border bg-white">
+        <div className="rounded-md border bg-white overflow-x-auto">
           <Table>
             <TableHeader>
               <TableRow>

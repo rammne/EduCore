@@ -68,7 +68,7 @@ export default async function StudentHomePage() {
         </form>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-[1fr_2fr]">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-[1fr_2fr]">
         {/* Announcements Section (Left) */}
         <div className="space-y-6">
           <div className="flex items-center space-x-2">
@@ -104,7 +104,7 @@ export default async function StudentHomePage() {
             <BookOpen className="h-5 w-5 text-primary" />
             <h2 className="text-2xl font-bold">Courses</h2>
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
             {courses?.length === 0 ? (
               <p className="text-muted-foreground col-span-2">No courses available.</p>
             ) : (
